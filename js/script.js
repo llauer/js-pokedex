@@ -20,12 +20,53 @@ var repository = [
   {
     name: 'Wartortle',
     height: 1,
-    type: 'water'
+    type: ['water']
+  },
+  {
+    name: 'Venusaur',
+    height: 2,
+    type: ['grass', 'poison']
+  },
+  {
+    name: 'Charmander',
+    height: 1,
+    type: ['fire']
+  },
+  {
+    name: 'Charmeleon',
+    height: 1.1,
+    type: ['fire']
+  },
+  {
+    name: 'Paras',
+    height: 0.3,
+    type: ['grass', 'bug']
+  },
+  {
+    name: 'Gastly',
+    height: 1.3,
+    type: ['ghost', 'poison']
+  },
+  {
+    name: 'Golem',
+    height: 1,
+    type: ['rock', 'ground']
   }
+  
 ];
-repository.forEach(function(repo, i){
-  document.write(repository[i].name + repository[i].height + "</p>");
-});
+for (i = 0; i < repository.length; i++){
+  document.write(repository[i].name + " (height: " + repository[i].height + ")") ;
+  if (repository[i].height >= 0.9) {
+    document.write("  **Wow, that's big!**");
+  }
+  document.write("<br>");
+};
+
+
+//comeback to this later.
+// repository.forEach(function(repo, i){
+//   document.write(repository[i].name + repository[i].height + "</p>");
+// });
 // function printPokemon(repository){
 //   console.log("**********************");
 //   console.log(repository);
@@ -37,61 +78,4 @@ repository.forEach(function(repo, i){
 //   if(repo > 0){
 //     console.log("Thats a big one!");
 //   }
-// });
-
-//   console.log("Pokemon " + pokemonRepo);
-// });
-//if is not working
-//spacing is not working.
-// for (i = 0; i < repository.length; i++){
-//   document.write(repository[i].name, + "  " + repository[i].height + "  " + "</p>");
-
-//   if (repository[i].height >= 0.9){
-//     document.write("This is a big one!    <br>")
-//   }
-// }
-
-
-
-// for (i = 0; i < repository.length; i++){
-//   console.log(repository);
-// }
-// for(let i = 0; i < repository.length; i++){
-
-//   document.write(repository[i]);
-// }
-
-
-
-// for (i=0; i < repository.length; i++){
-//   document.write("pokemon" + i + repository[i] + "<br >");
-//   document.write(repository.join(" <br>"));
-// }
-
-
-//starting over!!!
-// var isBig = "Thats a big one!";
-
-// for (var i = 0; i < repository.length; i++) {
-//  document.write(repository.name + "<br>");
-// }
-
-// console.log(repository.name);
-// repository.forEach(function(repo) {
-  
-//     for(var prop in repo){
-//       if(repo){
-//         console.log("Thats a big one!")
-//       }
-//         // document.write('\n')
-   
-//         document.write(prop + ':  ' + repo[prop] );
-//         document.write("<br><br>")
-//         //   if (repository[1]) 0.7; {
-//         //    document.write("Thats a big one")
-//         // }
-       
-//   }
-
- 
 // });
