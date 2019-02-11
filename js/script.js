@@ -6,7 +6,7 @@
 //   {"name":"Wartortle", "height":"1 m", "type":"water"}
 // ];
 
-let repository = [
+var repository = [
   {
     name: 'Bulbasaur',
     height: 0.7,
@@ -23,16 +23,33 @@ let repository = [
     type: 'water'
   }
 ];
+repository.forEach(function(repo, i){
+  document.write(repository[i].name + repository[i].height + "</p>");
+});
+// function printPokemon(repository){
+//   console.log("**********************");
+//   console.log(repository);
+//   console.log("**********************");
+// }
+// repository.forEach(printPokemon);
 
+// repository.forEach(function(repo){
+//   if(repo > 0){
+//     console.log("Thats a big one!");
+//   }
+// });
+
+//   console.log("Pokemon " + pokemonRepo);
+// });
 //if is not working
 //spacing is not working.
-for (i = 0; i < repository.length; i++){
-  document.write(repository[i].name, + "  " + repository[i].height + "  " + "</p>");
+// for (i = 0; i < repository.length; i++){
+//   document.write(repository[i].name, + "  " + repository[i].height + "  " + "</p>");
 
-  if (repository[i].height >= 0.9){
-    document.write("This is a big one!    <br>")
-  }
-}
+//   if (repository[i].height >= 0.9){
+//     document.write("This is a big one!    <br>")
+//   }
+// }
 
 
 
