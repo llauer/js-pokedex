@@ -58,9 +58,19 @@ for (i = 0; i < repository.length; i++){
   document.write(repository[i].name + " (height: " + repository[i].height + ")") ;
   if (repository[i].height >= 0.9) {
     document.write("  **Wow, that's big!**");
-  }
+  }; 
+
+  // this just ends up showing the first item. Also need to figure out how to change colors.
+  // else if (repository[i].type = 'grass'){
+  //   console.log("I am grass")
+  // };
   document.write("<br>");
 };
+
+
+  console.log(repository[0]);
+  
+
 
 
 //comeback to this later.
