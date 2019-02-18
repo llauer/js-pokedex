@@ -57,9 +57,12 @@ var pokemonRepository = (function () {
 
   ];
 
+
   function add(pokemon) {
     repository.push(pokemon);
   }
+
+
 
   function getAll() {
     return repository;
@@ -71,22 +74,56 @@ var pokemonRepository = (function () {
   };
 
 }());
-Object.keys(pokemonRepository);
 
-Object.keys(pokemonRepository).forEach(function (key) {
-  document.write(key); // The object key
-  document.write(pokemonRepository[key]); // The object value
+
+pokemonRepository.getAll().forEach(function (repository) {
+  document.write(repository.name + " (height: " + repository.height + ")");
 });
 
 
-var pokemonName = Object.keys(pokemonRepository).filter(function (name) {
+// Object.keys(pokemonRepository).forEach(function (key) {
 
-  return pokemonRepository[name];
-});
+//   console.log(key, pokemonRepository[key]);
+//   document.write(pokemonRepository.name);
+
+
+// });
+// //example from lesson notes
+// Object.keys(pokemonRepository).forEach(function () {
+//   // document.write(pokemonRepository.getAll());
+//   document.write(pokemonRepository.name + " (height: " + pokemonRepository.height + ")");
+// });
+
+
+
+
+
+
+// Object.keys(pokemonRepository);
+
+// Object.keys(pokemonRepository).forEach(function (key) {
+//   document.write(key); // The object key
+//   document.write(pokemonRepository[key]); // The object value
+// });
+
+
+// var pokemonName = Object.keys(pokemonRepository).filter(function (name) {
+
+//   return pokemonRepository[name];
+// });
 
 // Logs ["pokemon names"]
-console.log(pokemonRepository.getAll());
-document.write(pokemonRepository.getAll());
+// console.log(pokemonRepository.getAll());
+//not working
+// document.write(pokemonRepository.getAll());
+
+
+
+
+
+
+
+
 // pokemonRepository.forEach(myFunction);
 
 // function myFunction(item, index) {
