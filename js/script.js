@@ -71,14 +71,37 @@ var pokemonRepository = (function () {
   };
 
 }());
+Object.keys(pokemonRepository);
+
+Object.keys(pokemonRepository).forEach(function (key) {
+  document.write(key); // The object key
+  document.write(pokemonRepository[key]); // The object value
+});
+
+
+var pokemonName = Object.keys(pokemonRepository).filter(function (name) {
+
+  return pokemonRepository[name];
+});
+
+// Logs ["pokemon names"]
+console.log(pokemonRepository.getAll());
+document.write(pokemonRepository.getAll());
+// pokemonRepository.forEach(myFunction);
+
+// function myFunction(item, index) {
+//   console.log(item);
+// }
 
 // hamzas example
 // pokemonRepository.forEach(function (IamTheCurrentObjectInThisIteration) {
 //   console.log(IamTheCurrentObjectInThisIteration.name);
 // });
 
-var entries = Object.entries(pokemonRepository)
-document.write(entries)
+// pokemonRepository.forEach(function (pokemon) {
+//   console.log(pokemon);
+// });
+
 
 
 // Object.entries(pokemonRepository).forEach(function (property) {
