@@ -72,10 +72,19 @@ var pokemonRepository = (function () {
 
 }());
 
-Object.keys(pokemonRepository).forEach(function (property) {
-  document.write(property.name + ': ' + pokemonRepository[property.height] + '<br>');
+// hamzas example
+// pokemonRepository.forEach(function (IamTheCurrentObjectInThisIteration) {
+//   console.log(IamTheCurrentObjectInThisIteration.name);
+// });
 
-});
+var entries = Object.entries(pokemonRepository)
+document.write(entries)
+
+
+// Object.entries(pokemonRepository).forEach(function (property) {
+//   document.write(property.name + ': ' + pokemonRepository[property.height] + '<br>');
+
+// });
 
 
 // original code
