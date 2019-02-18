@@ -78,6 +78,9 @@ var pokemonRepository = (function () {
 
 pokemonRepository.getAll().forEach(function (repository) {
   document.write(repository.name + " (height: " + repository.height + ")");
+  if (repository.height >= 0.9) {
+    document.write(" Wow, Thats big!" + '<br>')
+  }
 });
 
 
