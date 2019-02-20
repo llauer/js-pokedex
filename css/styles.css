@@ -9,15 +9,40 @@ body {
 .list-container {
   display: inline-block;
   position: relative;
-  left: 35%;
   background: #F6F6F6;
-  padding: 0 0 2em;
-  margin-top: -1%;
-  width: 33%;
-  border-radius: 40px;
-  text-align: justify;
+  padding: auto;
+  margin: auto;
+  width: 12%;
+  border-radius: 10px;
+  text-align: left;
+}
 
+#buttons li {
+  float: left;
+  list-style: none;
+  text-align: center;
 
+  margin-right: 35px;
+  width: 150px;
+  line-height: 60px;
+}
+
+.pokemon-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.pokemon-list li {
+  padding: 5px;
+  border-bottom: 1px solid #dddddd;
+}
+
+.pokemon-list li:hover {
+  background-color: #369;
+  color: #FFF;
+  margin: auto;
+  border-top-left-radius: 40px;
+  border-bottom-right-radius: 40px;
 }
 
 h1 {
@@ -26,8 +51,8 @@ h1 {
   width: 100%;
   background: #00C2FF;
   color: #fff;
-  margin-top: 15%;
-  padding: 4em 0 2em;
+  margin-top: 1%;
+  padding: 1em 0 1em;
   border-top-left-radius: 40px;
   border-bottom-right-radius: 40px;
 

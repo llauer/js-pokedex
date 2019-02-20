@@ -68,11 +68,13 @@ var pokemonRepository = (function () {
 
 //loop through pokemonRepository and return name and height to the page.
 pokemonRepository.getAll().forEach(function (repository) {
-  document.write("<br>" + repository.name + " (height: " + repository.height + ")" + "  ");
+  //comment out document.write
+  // document.write("<br>" + repository.name + " (height: " + repository.height + ")" + "  ");
 
   //check if height is larger than #.
   if (repository.height >= 0.9) {
-    document.write(" Wow, Thats big!")
+    //comment out document.write
+    //document.write(" Wow, Thats big!")
 
   }
 });
