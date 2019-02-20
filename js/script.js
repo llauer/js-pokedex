@@ -59,6 +59,11 @@ var pokemonRepository = (function () {
     return repository;
   }
 
+  //select pokemon list and add new items
+  var $pokemonList = document.querySelector('.pokemon-list');
+  var addPokemon = document.createElement('li')
+  $pokemonList.appendChild(addPokemon);
+
   return {
     add: add,
     getAll: getAll

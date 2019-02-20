@@ -12,8 +12,9 @@ body {
   background: #F6F6F6;
   padding: auto;
   margin: auto;
-  width: 12%;
-  border-radius: 10px;
+  width: 100%;
+  border-top-left-radius: 40px;
+  border-bottom-right-radius: 40px;
   text-align: left;
 }
 
@@ -21,9 +22,8 @@ body {
   float: left;
   list-style: none;
   text-align: center;
-
   margin-right: 35px;
-  width: 150px;
+  width: 100%;
   line-height: 60px;
 }
 
@@ -35,12 +35,14 @@ body {
 .pokemon-list li {
   padding: 5px;
   border-bottom: 1px solid #dddddd;
+  width: 100%;
 }
 
 .pokemon-list li:hover {
   background-color: #369;
   color: #FFF;
   margin: auto;
+  width: 50%;
   border-top-left-radius: 40px;
   border-bottom-right-radius: 40px;
 }
