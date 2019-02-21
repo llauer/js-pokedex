@@ -51,35 +51,65 @@ var pokemonRepository = (function () {
 
   ];
 
-  function add(pokemon) {
-    repository.push(pokemon);
+  function add(repository) {
+    repository.push(repository);
   }
 
   function getAll() {
     return repository;
   }
+  //this is defined but not read currently.
+  function showDetails(pokemon) {
+    console.log('pokemon');
+  }
 
+  //function to add items to the dom.
+  function addListItem(repository) {
+    var $ul = document.querySelector('ul');
+    var $li = document.createElement('li');
+    $ul.appendChild($li);
+
+    //create buttons for li elements.
+    var $button = document.createElement('button');
+    $li.appendChild($button);
+
+    //could i use innerHtml here. 
+    $button.innerText = repository.name;
+
+    //fix button styles.
+
+    //would it be better to assign variable here
+    $button.addEventListener('click', function (event) {
+      console.log(repository.name + "  height: " + repository.height)
+    })
+  }
   //select pokemon list and add new items
-  var $pokemonList = document.querySelector('.pokemon-list');
-  var addPokemon = document.createElement('li')
-  $pokemonList.appendChild(addPokemon);
+  // function addListItem(pokemon) {
+  //   var $ul = document.querySelector('ul');
+  //   var $li = document.createElement('li');
+  //   $ul.appendChild($li);
+  //   var $button = document.createElement('button');
+  //   $li.appendChild($button);
+  //   $button.innerText = repository.name;
+
+  // var $pokemonList = document.querySelector('.pokemon-list');
+  // var $addPokemon = document.createElement('li')
+  // $pokemonList.appendChild($addPokemon);
+  // var $addBtn = document.createElement('button');
+  //could i have used innerHtml here?
+  // $addBtn.innerText = repository.name;
+  // }
 
   return {
     add: add,
-    getAll: getAll
+    getAll: getAll,
+    addListItem: addListItem
   };
 
 })();
 
-//loop through pokemonRepository and return name and height to the page.
+//loop through pokemonRepository and return name to the page.
+
 pokemonRepository.getAll().forEach(function (repository) {
-  //comment out document.write
-  // document.write("<br>" + repository.name + " (height: " + repository.height + ")" + "  ");
-
-  //check if height is larger than #.
-  if (repository.height >= 0.9) {
-    //comment out document.write
-    //document.write(" Wow, Thats big!")
-
-  }
+  pokemonRepository.addListItem(repository)
 });
