@@ -1,105 +1,108 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600');
 
-
 body {
-  margin: 40px;
-  font-family: 'Montserrat', sans-serif;
-  background-color: #fff;
-  color: #444;
+	margin: 40px;
+	font-family: 'Montserrat', sans-serif;
+	background-color: #fff;
+	color: #444;
 }
 
 .pokemon-details {
-  float: right;
-  width: 79.7872%;
-  background-color: #369;
-  color: #fff;
-  text-align: center;
+	display: grid;
+	height: 87vh;
+	width: 100vw;
+	float: right;
+	width: 79.7872%;
+	background-color: rgb(138, 170, 202);
+	color: #fff;
+	text-align: center;
+	border-radius: 5px;
 }
 
 .sidebar {
-  float: left;
-  width: 95%;
+	float: left;
+	width: 95%;
 }
 
 .list-container {
-  max-width: 940px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-gap: 10px;
+	/* max-width: 940px; */
+	/* margin: 0 auto; */
+	display: grid;
+	/* grid-template-columns: 1fr 3fr; */
+	grid-template-rows: 2fr 8fr;
+	grid-gap: 1px;
 }
 
-.list-container>* {
-  background-color: #369;
-  color: #fff;
-  border-radius: 5px;
-  padding: 2px;
-  font-size: 150%;
-  margin-bottom: 5px;
+.list-container > * {
+	background-color: #369;
+	color: #fff;
+	border-radius: 5px;
+	padding: 2px;
+	font-size: 150%;
+	margin-bottom: 5px;
 }
 
 button {
-  border-top: 1px solid #96d1f8;
-  background: #65a9d7;
-  background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
-  background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
-  background: -moz-linear-gradient(top, #3e779d, #65a9d7);
-  background: -ms-linear-gradient(top, #3e779d, #65a9d7);
-  background: -o-linear-gradient(top, #3e779d, #65a9d7);
-  padding: 12px 24px;
-  -webkit-border-radius: 13px;
-  -moz-border-radius: 13px;
-  border-radius: 13px;
-  -webkit-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
-  -moz-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
-  box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
-  text-shadow: rgba(0, 0, 0, .4) 0 1px 0;
-  color: white;
-  font-size: 15px;
-  font-family: Georgia, serif;
-  text-decoration: none;
-  vertical-align: middle;
+	border-top: 1px solid #96d1f8;
+	background: #65a9d7;
+	background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
+	background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+	background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+	background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+	background: -o-linear-gradient(top, #3e779d, #65a9d7);
+	padding: 12px 24px;
+	-webkit-border-radius: 13px;
+	-moz-border-radius: 13px;
+	border-radius: 13px;
+	-webkit-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+	-moz-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+	box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+	text-shadow: rgba(0, 0, 0, .4) 0 1px 0;
+	color: white;
+	font-size: 15px;
+	font-family: Georgia, serif;
+	text-decoration: none;
+	vertical-align: middle;
 }
 
 button:hover {
-  border-top-color: #28597a;
-  background: #00C2FF;
-  color: #ccc;
+	border-top-color: #28597a;
+	background: #adc3ca;
+	color: rgb(255, 255, 255);
 }
 
 button:active {
-  border-top-color: #1b435e;
-  background: #1b435e;
+	border-top-color: #1b435e;
+	background: #1b435e;
 }
 
 .pokemon-list {
-  list-style-type: none;
-  padding-left: 0;
+	list-style-type: none;
+	padding-left: 0;
 }
 
 .pokemon-list li {
-  padding: 10px;
-  /* border-bottom: 1px solid #dddddd; */
-  width: 100%;
+	padding: 10px;
+	/* border-bottom: 1px solid #dddddd; */
+	width: 100%;
 }
 
 .list-container {
-  max-width: 940px;
-  margin: 0 20px;
-  display: grid;
-  grid-gap: 10px;
+	max-width: 940px;
+	margin: 0 20px;
+	/* display: grid; */
+	/* grid-gap: 10px; */
 }
 
 h1 {
-  font-size: 50px;
-  text-align: center;
-  width: 100%;
-  background: #00C2FF;
-  color: #fff;
-  margin-top: 1%;
-  margin: 15px;
-  padding: 1em 0 1em;
-  border-top-left-radius: 40px;
-  border-bottom-right-radius: 40px;
-
+	font-size: 50px;
+	text-align: center;
+	width: 100%;
+	background: #00c2ff;
+	color: #fff;
+	margin-top: 1%;
+	margin: 15px;
+	padding: 1em 0 1em;
+	border-top-left-radius: 40px;
+	border-bottom-right-radius: 40px;
 }
