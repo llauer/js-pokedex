@@ -2,7 +2,7 @@
 
 //iife to contain the array.
 var pokemonRepository = (function() {
-	var repository = [
+	var pokemonList = [
 		{
 			name: 'Bulbasaur',
 			height: 0.7,
@@ -50,12 +50,12 @@ var pokemonRepository = (function() {
 		}
 	];
 
-	function add(repository) {
-		repository.push(repository);
+	function add(pokemon) {
+		pokemon.push(pokemon);
 	}
 
 	function getAll() {
-		return repository;
+		return pokemonList;
 	}
 	//this is defined but not read currently.
 	function showDetails(pokemon) {
@@ -63,7 +63,7 @@ var pokemonRepository = (function() {
 	}
 
 	//function to add items to the dom.
-	function addListItem(repository) {
+	function addListItem(pokemonList) {
 		var $ul = document.querySelector('ul');
 		var $li = document.createElement('li');
 		$ul.appendChild($li);
@@ -73,13 +73,13 @@ var pokemonRepository = (function() {
 		$li.appendChild($button);
 
 		//could i use innerHtml here.
-		$button.innerText = repository.name;
+		$button.innerText = pokemonList.name;
 
 		//fix button styles.
 
 		//would it be better to assign variable here
 		$button.addEventListener('click', function(event) {
-			console.log(repository.name + '  height: ' + repository.height);
+			console.log(pokemonList.name + '  height: ' + pokemonList.height);
 		});
 	}
 	//select pokemon list and add new items
