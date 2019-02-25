@@ -12,19 +12,11 @@
     <h1>Pokémon</h1>
 
     <div class="list-container">
-      <ul id="buttons" class="pokemon-list">
-        <!-- remove static items -->
-        <!-- <li>Bulbasaur</li>
-            <li>Ivysaur</li>
-            <li>Wartortle</li>
-            <li>Venusaur</li>
-            <li>Charmander</li>
-            <li>Charmeleon</li>
-            <li>Paras</li>
-            <li>Gastly</li>
-            <li>Golem</li> -->
-      </ul>
-      <script src="js/script.js"></script>
+      <ul id="buttons" class="pokemon-list"></ul>
     </div>
+    <!-- support for older browsers -->
+    <script src="js/promise-polyfill.js"></script>
+    <script src="js/fetch-polyfill.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
