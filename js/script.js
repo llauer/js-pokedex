@@ -57,7 +57,7 @@ var pokemonRepository = (function() {
 	function getAll() {
 		return repository;
 	}
-	//this is defined but not read currently.
+
 	function showDetails(newPokemon) {
 		console.log(newPokemon.name);
 	}
@@ -72,12 +72,8 @@ var pokemonRepository = (function() {
 		var $button = document.createElement('button');
 		$li.appendChild($button);
 
-		//could i use innerHtml here.
 		$button.innerText = newPokemon.name;
 
-		//fix button styles.
-
-		//would it be better to assign variable here
 		$button.addEventListener('click', function(event) {
 			console.log(newPokemon.name + '  height: ' + newPokemon.height);
 		});
