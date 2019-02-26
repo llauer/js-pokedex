@@ -82,19 +82,9 @@ var pokemonRepository = (function() {
 	};
 })();
 
+//load data with promise
 pokemonRepository.loadList().then(function() {
 	pokemonRepository.getAll().forEach(function(currentPokemon) {
 		pokemonRepository.addListItem(currentPokemon);
 	});
 });
-
-// pokemonRepository.loadList().then(function() {
-// 	// Now the data is loaded!
-// 	pokemonRepository.getAll().forEach(function(pokemon) {
-// 		addListItem(pokemon);
-// 	});
-// })();
-
-// //loop through pokemonRepository and return name to the page.
-
-// });
