@@ -12,6 +12,13 @@ var pokemonRepository = (function() {
   function getAll() {
     return repository;
   }
+  // //Messing around with the loading screen.
+  // window.addEventListener('load', function() {
+  //   setTimeout(function() {
+  //     var load_screen = document.getElementById('load_screen');
+  //     document.body.removeChild(load_screen);
+  //   }, 1000);
+  // });
 
   function showDetails(item) {
     pokemonRepository.loadDetails(item).then(function() {
@@ -32,7 +39,7 @@ var pokemonRepository = (function() {
     $button.innerText = newPokemon.name;
 
     $button.addEventListener('click', function(event) {
-      console.log(newPokemon.name + '  height: ' + newPokemon.height);
+      console.log(newPokemon.name + '  details: ' + newPokemon.detailsUrl);
     });
   }
 
@@ -48,6 +55,8 @@ var pokemonRepository = (function() {
             detailsUrl: item.url
           };
           add(pokemon);
+          // //checking what is returned by
+          // console.log(pokemon);
         });
       })
       .catch(function(e) {
