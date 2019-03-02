@@ -12,13 +12,6 @@ var pokemonRepository = (function() {
   function getAll() {
     return repository;
   }
-  // //Messing around with the loading screen.
-  // window.addEventListener('load', function() {
-  //   setTimeout(function() {
-  //     var load_screen = document.getElementById('load_screen');
-  //     document.body.removeChild(load_screen);
-  //   }, 1000);
-  // });
 
   //function to add items to the dom.
   function addListItem(newPokemon) {
@@ -75,6 +68,9 @@ var pokemonRepository = (function() {
         console.error(e);
       });
   }
+
+  // this is where i think the loadingMessage should go. Need more research.
+
   //this will print the pokemon information to the console.
   function showDetails(item) {
     pokemonRepository.loadDetails(item).then(function() {
