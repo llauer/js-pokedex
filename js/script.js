@@ -69,12 +69,68 @@ var pokemonRepository = (function() {
       });
   }
 
-  // this is where i think the loadingMessage should go. Need more research.
+  //display modal with name height and image of the pokemon.
 
-  //this will print the pokemon information to the console.
+  var $modalContainer = document.querySelector('#modal-container');
+
+  function showModal(item) {
+    // Clear all existing modal content
+    $modalContainer.innerHTML = '';
+
+    var modal = document.createElement('div');
+    modal.classList.add('modal');
+
+    // Add the new modal content
+    var closeButtonElement = document.createElement('button');
+    closeButtonElement.classList.add('modal-close');
+    closeButtonElement.innerText = 'Close';
+    closeButtonElement.addEventListener('click', hideModal);
+
+    var titleElement = document.createElement('h1');
+    titleElement.innerText = 'Name: ' + item.name;
+
+    //display image of the pokemon
+    var imageElement = document.createElement('img');
+    imageElement.setAttribute('src', item.imageUrl);
+
+    var contentElement = document.createElement('p');
+    contentElement.innerText = 'Height: ' + item.height;
+
+    modal.appendChild(closeButtonElement);
+    modal.appendChild(titleElement);
+    modal.appendChild(contentElement);
+    modal.appendChild(imageElement);
+    $modalContainer.appendChild(modal);
+
+    $modalContainer.classList.add('is-visible');
+  }
+  // hide the modal
+  function hideModal() {
+    $modalContainer.classList.remove('is-visible');
+  }
+
+  document.querySelector('#show-modal').addEventListener('click', () => {
+    showModal('Modal title', 'This is the modal content!');
+  });
+
+  //if the user presses the ESC key the modal will close.
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && $modalContainer.classList.contains('is-visible')) {
+      hideModal();
+    }
+  });
+
+  //close the modal if the user clicks outside of the container.
+  $modalContainer.addEventListener('click', (e) => {
+    var target = e.target;
+    if (target === $modalContainer) {
+      hideModal();
+    }
+  });
+
   function showDetails(item) {
     pokemonRepository.loadDetails(item).then(function() {
-      console.log(item);
+      showModal(item);
     });
   }
 
@@ -83,8 +139,10 @@ var pokemonRepository = (function() {
     getAll: getAll,
     loadList: loadList,
     loadDetails: loadDetails,
-    // showDetails: showDetails,
-    addListItem: addListItem
+    showDetails: showDetails,
+    addListItem: addListItem,
+    showModal: showModal,
+    hideModal: hideModal
   };
 })();
 
