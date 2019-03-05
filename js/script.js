@@ -87,7 +87,7 @@ var pokemonRepository = (function() {
     closeButtonElement.addEventListener('click', hideModal);
 
     var titleElement = document.createElement('h1');
-    titleElement.innerText = 'Name: ' + item.name;
+    titleElement.innerText = item.name;
 
     //display image of the pokemon
     var imageElement = document.createElement('img');
@@ -95,6 +95,9 @@ var pokemonRepository = (function() {
 
     var contentElement = document.createElement('p');
     contentElement.innerText = 'Height: ' + item.height;
+
+    // var contentElement1 = document.createElement('p');
+    // contentElement.innerHTML = 'URL ' + detailsUrl;
 
     modal.appendChild(closeButtonElement);
     modal.appendChild(titleElement);
@@ -109,9 +112,9 @@ var pokemonRepository = (function() {
     $modalContainer.classList.remove('is-visible');
   }
 
-  document.querySelector('#show-modal').addEventListener('click', () => {
-    showModal('Modal title', 'This is the modal content!');
-  });
+  // document.querySelector('#show-modal').addEventListener('click', () => {
+  //   showModal('Modal title', 'This is the modal content!');
+  // });
 
   //if the user presses the ESC key the modal will close.
   window.addEventListener('keydown', (e) => {
