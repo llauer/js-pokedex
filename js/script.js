@@ -82,8 +82,8 @@ var pokemonRepository = (function() {
 
     // Add the new modal content
     var closeButtonElement = document.createElement('button');
-    closeButtonElement.classList.add('modal-close');
-    closeButtonElement.innerText = 'Close';
+    closeButtonElement.classList.add('modal-close', 'closeBtn');
+    closeButtonElement.innerHTML = '&times;';
     closeButtonElement.addEventListener('click', hideModal);
 
     var titleElement = document.createElement('h1');

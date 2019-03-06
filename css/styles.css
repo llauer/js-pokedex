@@ -49,6 +49,21 @@ button:active {
   background: #1b435e;
 }
 
+.closeBtn {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  max-width: 50px;
+}
+
+.closeBtn:hover,
+.closeBtn:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .pokemon-list {
   list-style-type: none;
   padding-left: 0;
@@ -62,7 +77,9 @@ button:active {
 }
 
 h1 {
-  font-size: 50px;
+  /* font-size: 50px; */
+  /* calculate the size of the font based on screen size - Trying this out. */
+  font-size: calc(1em + 1vw);
   text-align: center;
   width: 100%;
   background: rgb(131, 54, 54);
@@ -126,7 +143,8 @@ h1 {
   border: 0;
   background: none;
   color: #777;
-  text-decoration: underline;
+  text-decoration: none;
+  font-size: 50px;
 }
 
 .modal h1 {
